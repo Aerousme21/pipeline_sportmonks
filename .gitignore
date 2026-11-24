@@ -1,9 +1,27 @@
-.venv-*/
-data/raw/player_stats.csv
-warehouse.duckdb
-airflow_home/
-dbt_sm/target/
-dbt_sm/logs/
-logs/
+# Environment
 .env
+.env.*
+!.env.example
+venv/
+.venv/
 __pycache__/
+
+# Airflow
+airflow.db/
+logs/
+webserver_config.py
+
+# Database
+*.duckdb
+*.db
+
+# Data mentah
+data/
+*.csv
+
+# Python
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
