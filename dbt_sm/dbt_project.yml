@@ -1,0 +1,15 @@
+name: sportmonks
+version: '1.0.0'
+profile: sportmonks
+model-paths: ['models']
+test-paths: ['tests']
+models:
+  sportmonks:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    core:
+      +materialized: table
+    marts:
+      +materialized: table

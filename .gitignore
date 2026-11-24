@@ -1,0 +1,9 @@
+.venv-*/
+data/raw/player_stats.csv
+warehouse.duckdb
+airflow_home/
+dbt_sm/target/
+dbt_sm/logs/
+logs/
+.env
+__pycache__/

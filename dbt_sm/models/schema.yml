@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_player_stats
+    columns:
+      - name: fixture_id
+        data_tests: [not_null]
+
+  - name: stg_ref_liga
+    columns:
+      - name: league_id
+        data_tests: [unique, not_null]
+
+  - name: fct_player_match
+    columns:
+      - name: player_id
+        data_tests: [not_null]
+      - name: rating
+        data_tests: [not_null]
+      - name: posisi_id
+        data_tests: [not_null]
+      - name: league_id
+        data_tests:
+          - relationships:
+              to: ref('stg_ref_liga')
+              field: league_id
+
+  - name: quarantine_player_stats
+    columns:
+      - name: quarantine_reason
+        data_tests: [not_null]
+
+  - name: mart_player_season
+    columns:
+      - name: player_id
+        data_tests: [not_null]
